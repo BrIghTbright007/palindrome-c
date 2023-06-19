@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-char word[20];
 
-int check(int len; char word){
+int check(int len, char word[]){
     int i = 0;
     while (i <= len){
         if(word[i] != word[(len-1)-i]){
@@ -16,9 +15,10 @@ int check(int len; char word){
 }
 
 int main() {
+    char word[20];
     scanf("%s", &word);
     int len = strlen(word);
-    if check() == 0{
+    if (check(len, word) == 0){
         printf("Not Palindrome");
     }
     else{
